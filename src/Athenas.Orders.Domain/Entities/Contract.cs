@@ -9,4 +9,9 @@ public sealed class Contract : Entity
     {
         Product = product;
     }
+
+    protected Contract()
+    {
+        
+    }
 }

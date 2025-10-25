@@ -8,6 +8,6 @@ public abstract class Entity
     public Entity()
     {
         Id = Guid.NewGuid();
-        CreatedAt = DateTime.Now;
+        CreatedAt = DateTime.UtcNow;
     }
 }

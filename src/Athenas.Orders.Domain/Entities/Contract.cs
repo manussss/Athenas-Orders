@@ -2,5 +2,11 @@ namespace Athenas.Orders.Domain.Entities;
 
 public sealed class Contract : Entity
 {
-    public long Number { get; private set; }
+    public Guid Number { get; private set; } = Guid.NewGuid();
+    public EProduct Product { get; private set; }
+
+    public Contract(EProduct product)
+    {
+        Product = product;
+    }
 }

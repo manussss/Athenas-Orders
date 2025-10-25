@@ -15,4 +15,13 @@ public class OrdersRepository(OrdersContext context) : IOrdersRepository
         await context.AddAsync(order, cancellationToken);
         await context.SaveChangesAsync(cancellationToken);
     }
+
+    public async Task<IEnumerable<Order>> GetAllAsync()
+    {
+        return context
+            .Order
+            .AsNoTracking()
+            .Include(o => o.Contract)
+            .Include(o => o.OrderItems);
+    }
 }

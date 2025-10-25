@@ -7,9 +7,7 @@ public class OrdersContext(DbContextOptions<OrdersContext> options) : DbContext(
     public DbSet<Contract> Contract { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
-        {
-            builder.ApplyConfigurationsFromAssembly(typeof(OrdersContext).Assembly);
-
-            base.OnModelCreating(builder);
-        }
+    {
+        base.OnModelCreating(builder);
+    }
 }

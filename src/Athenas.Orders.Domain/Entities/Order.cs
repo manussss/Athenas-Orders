@@ -14,4 +14,9 @@ public sealed class Order : Entity
         OrderItems = orderItems;
         ContractId = contractId;
     }
+
+    public void CalculateTotalValue()
+    {
+        TotalValue = OrderItems.Sum(o => o.Value * o.Quantity);
+    }
 }

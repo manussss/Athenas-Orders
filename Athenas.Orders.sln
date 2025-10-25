@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Athenas.Orders.Domain", "sr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Athenas.Orders.Infra", "src\Athenas.Orders.Infra\Athenas.Orders.Infra.csproj", "{0AA6ABA6-82FE-4F64-A882-127732A41258}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Athenas.Orders.Application", "src\Athenas.Orders.Application\Athenas.Orders.Application.csproj", "{15E07CA0-F463-4DB4-932D-95940F4FD2D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,10 +34,15 @@ Global
 		{0AA6ABA6-82FE-4F64-A882-127732A41258}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0AA6ABA6-82FE-4F64-A882-127732A41258}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0AA6ABA6-82FE-4F64-A882-127732A41258}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15E07CA0-F463-4DB4-932D-95940F4FD2D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15E07CA0-F463-4DB4-932D-95940F4FD2D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15E07CA0-F463-4DB4-932D-95940F4FD2D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15E07CA0-F463-4DB4-932D-95940F4FD2D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{10E96481-AB77-4973-9C3A-0E8CAC0FEB3B} = {0B4D9EED-4CEB-4589-B1AC-D14E83459D51}
 		{E87A8767-41E5-412B-81DB-1CC714A0915E} = {0B4D9EED-4CEB-4589-B1AC-D14E83459D51}
 		{0AA6ABA6-82FE-4F64-A882-127732A41258} = {0B4D9EED-4CEB-4589-B1AC-D14E83459D51}
+		{15E07CA0-F463-4DB4-932D-95940F4FD2D9} = {0B4D9EED-4CEB-4589-B1AC-D14E83459D51}
 	EndGlobalSection
 EndGlobal

@@ -3,6 +3,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDatabaseInjection(builder.Configuration);
+builder.Services.AddScoped<IContractService, ContractService>();
+builder.Services.AddScoped<IOrderService, OrderService>();
+builder.Services.AddScoped<IOrdersRepository, OrdersRepository>();
 
 var app = builder.Build();
 
@@ -24,7 +27,7 @@ app.MapPost("/api/v1/contract", async (
 
     return Results.Created("api/v1/contract", new { Id = contract.Id, Number = contract.Number });
 })
-.WithName("CreateOrder")
+.WithName("CreateContract")
 .WithOpenApi();
 
 app.MapPost("/api/v1/orders", async (
@@ -39,5 +42,20 @@ app.MapPost("/api/v1/orders", async (
 })
 .WithName("CreateOrder")
 .WithOpenApi();
+
+app.MapGet("/api.v1/orders", async ([FromServices] IOrderService service) =>
+{
+    var orders = await service.GetAllAsync();
+
+    return Results.Ok(orders);
+})
+.WithName("GetOrders")
+.WithOpenApi();;
+
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<OrdersContext>();
+    await db.Database.MigrateAsync();
+}
 
 await app.RunAsync();

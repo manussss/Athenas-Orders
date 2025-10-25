@@ -2,3 +2,8 @@ global using Athenas.Orders.Infra.Extensions;
 global using Microsoft.AspNetCore.Mvc;
 global using Athenas.Orders.Application.Dtos;
 global using Athenas.Orders.Application.Services.Interfaces;
+global using Athenas.Orders.Application.Services;
+global using Athenas.Orders.Domain.Interfaces;
+global using Athenas.Orders.Infra.Repositories;
+global using Athenas.Orders.Infra.Data;
+global using Microsoft.EntityFrameworkCore;

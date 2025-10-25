@@ -7,6 +7,6 @@ public record CreateOrderDto
 
     public static implicit operator Order(CreateOrderDto dto)
     {
-        return new Order((IEnumerable<OrderItem>)dto.OrderItems, dto.ContractId);
+        return new Order([.. dto.OrderItems.Select(x => (OrderItem)x)], dto.ContractId);
     }
 }

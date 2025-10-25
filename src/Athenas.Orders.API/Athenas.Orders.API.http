@@ -1,0 +1,6 @@
+@Athenas.Orders.API_HostAddress = http://localhost:5178
+
+GET {{Athenas.Orders.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
